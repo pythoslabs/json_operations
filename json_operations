@@ -1,0 +1,16 @@
+# -----------------------------------------------------------------  
+# JSON file To dataframe 
+
+# input file format 
+# [{"date":"2019-07-24T00:00:00Z","A":0,"B":0,"C":2,"D":0},{"date":"2020-07-24T00:00:00Z","A":1,"B":3,"C":6,"D":2}, ......]
+
+
+import json
+f = open('../data/user.json', "r")
+#k =f.readline()  or 
+k =f.read()
+data  = json.loads(k)
+df = pd.DataFrame().append(data, ignore_index=True)
+df.head()
+
+# ----------------------------------------------------------------- 
