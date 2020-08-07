@@ -14,3 +14,13 @@ df = pd.DataFrame().append(data, ignore_index=True)
 df.head()
 
 # ----------------------------------------------------------------- 
+# Getting a specific branch of a JSON from a URL end-point 
+
+import json
+url= "http:// .... "
+response = requests.get(url)
+response_json = json.loads(response.text)
+data = response_json['Data']['Open']
+df = pd.DataFrame().append(data, ignore_index=True)
+df.head()
+# ----------------------------------------------------------------- 
